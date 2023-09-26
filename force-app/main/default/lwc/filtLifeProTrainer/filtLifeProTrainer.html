@@ -1,0 +1,17 @@
+  <template>
+        <lightning-card variant = "Brand">               
+            <lightning-layout  multiple-rows vertical-align = "center" > 
+                   <template lwc:if = {trainerInfo} for:each = {trainerList} for:item = "trainer">
+                        <lightning-layout-item key = {trainer.Name} size = "12" padding = "around-large" large-device-size = "4" >
+                            <lightning-formatted-rich-text value={trainer.Photo__c} height="100px" width="100px"></lightning-formatted-rich-text>
+                            <p>{trainer.Name}  {trainer.Last_Name__c}</p>
+                            <p>{trainer.Specialities__c}</p> 
+                            <p>{trainer.Certifications__c}</p>
+                            <p>{trainer.Email__c}</p>
+                            <p>{trainer.Phone_Number__c}</p>
+                            <p>{trainer.Availability_Schedule__c}</p>
+                        </lightning-layout-item> 
+                    </template>
+            </lightning-layout>   
+        </lightning-card> 
+    </template>
